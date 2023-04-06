@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ==========================================================================\
+|
+|   To learn how to make your own language parser, please check the following
+|   link:
+|       https://npp-user-manual.org/docs/function-list/
+|
+\=========================================================================== -->
+<NotepadPlus>
+	<functionList>
+		<!-- ================================ [ Rexx ] -->
+
+		<parser
+			displayName="Rexx"
+			id         ="rexx_label"
+			commentExpr="(?x)                                  # Utilize inline comments (see `RegEx - Pattern Modifiers`)
+							(?m-s:--.*$)                       # Single Line Comment 1
+						|
+							(?ms:\/\*.*\*\/)					# Multiline Comment
+						"
+		>
+			<classRange
+				mainExpr    ="(?ms:^[\x20\t]*::class\s+[a-zA-Z0-9.@$%#_]+.*?(?=--))"
+			>
+				<className>
+					<nameExpr expr="(?ms:^[\x20\t]*::class\s+\K[a-zA-Z0-9.@$%#_]+)" />
+				</className>
+				<function
+					mainExpr="(?ms:^[\x20\t]*::method\s+\K[a-zA-Z0-9.@$%#_]+)"
+				>
+					<functionName>
+						<funcNameExpr expr=".*" />
+					</functionName>
+				</function>
+			</classRange>
+			
+			<function
+				mainExpr="(?ms:^[\x20\t]*\K[a-zA-Z0-9.@$%#_]+(?=:))"
+			/>
+		</parser>
+	</functionList>
+</NotepadPlus>
