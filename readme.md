@@ -5,7 +5,7 @@ I managed after a few tries to create a regex XML file for the parser of Notepad
 
 Of course there is still room for improvement. But since I'm far from being a regex pro, that should take some time.
 
-##What does the parser recognize?
+## What does the parser recognize?
 
 Source                      function list
 ------                      -------------
@@ -19,7 +19,7 @@ proc: procedure       ->    proc
 ::class myClass       ->    myClass (as Class)
   ::method myMethod   ->    myMethod (as Method of Class)
   
-###Defining the end of a class in the source code
+### Defining the end of a class in the source code
 Because of the way the parser works, the end of a class must be marked in the source code. Otherwise the parser will not work properly.
 
 ::class myClass
