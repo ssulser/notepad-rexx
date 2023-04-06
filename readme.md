@@ -1,7 +1,7 @@
-# Rexx Functionlist for Notepad++
-Since I am looking into Rexx, I searched for good editors or IDE's on the internet. Unfortunately, the offer is sparse. But even the plugins for Visual Code Studio do not offer an automated function list.
+# Rexx function list for Notepad++
+Since I am looking into Rexx, I searched for good editors or IDE's on the internet. Unfortunately, the offer is sparse. Even the plugins for Visual Code Studio from IBM or Broadcom do not offer an automated function list.
 
-I managed after a few tries to create a regex parser for Notepad++ that it suffices for my needs. The function list shows routines, procedures and the object-oriented terms of ooRexx (::class, ::method).
+I managed after a few tries to create a regex XML file for the parser of Notepad++. The function list shows routines, procedures and the object-oriented terms of ooRexx (::class, ::method). Actually it put everything that starts with :: on a new line into the function list.
 
 Of course there is still room for improvement. But since I'm far from being a regex pro, that should take some time.
 
