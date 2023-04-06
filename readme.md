@@ -33,5 +33,4 @@ Because of the way the parser works, the end of a class must be marked in the so
 ```
 I have solved it in such a way that a class range of ::class goes up to the first occurrence of '--'. Therefore the C-style comments (/* .... */) must be used to comment within the class.
 ## And so it should look like
-![image](https://user-images.githubusercontent.com/74837226/230462203-44a04c30-fc82-4118-b48b-82b2e2cefa89.png)
-
+![Screenshot](Screenshot.png)
